@@ -1,0 +1,37 @@
+# Taps
+tap "hashicorp/tap"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "azure/functions"
+
+# Main
+brew "chezmoi"
+brew "mas"
+brew "tree"
+
+# Code etc
+brew "azure-functions-core-tools"
+brew "terraform"
+brew "vault"
+brew "hugo"
+brew "azure-cli"
+brew "python@3.10"
+brew "git"
+
+# Casks
+cask "alfred"
+cask "fork"
+cask "iterm2"
+cask "powershell"
+cask "spotify"
+cask "visual-studio-code"
+cask "authy"
+cask "discord"
+cask "firefox"
+cask "google-chrome"
+cask "usr-sse2-rdm" # RDM for display resolution
+cask "rectangle"
+cask "microsoft-office"
