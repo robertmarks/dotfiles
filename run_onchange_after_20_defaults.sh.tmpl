@@ -19,6 +19,7 @@ defaults write com.apple.finder QuitMenuItem -bool true
 # Don't show warning for file extension changing
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool true
 # Open new finder windows in home folder
+defaults write com.apple.finder NewWindowTarget -string "PfLo"
 defaults write com.apple.finder NewWindowTargetPath "file://{{ .chezmoi.homeDir }}"
 # Show items on desktop
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
@@ -26,6 +27,10 @@ defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 # Show title instantly
 defaults write NSGlobalDomain "NSToolbarTitleViewRolloverDelay" -float "0" && killall Finder
+# Enable snap-to-grid for icons on the desktop and in other icon views
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
 # Set screenshot location
 defaults write com.apple.screencapture "location" -string "~/Documents/Screenshots" && killall SystemUIServer
