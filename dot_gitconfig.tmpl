@@ -1,0 +1,46 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Rob Marks
+	email = karlmarx934@gmail.com
+[core]
+	excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[alias]
+	bdd = branch -D
+	ca = commit --amend
+	cad = commit --amend --date=now
+	co = checkout
+	cb = checkout -b
+	au = add -u
+	ac = !git add -A && git commit -m
+	cim = commit -m
+	lb = git checkout -
+	lr = !git checkout develop && git pull origin && git checkout - && git rebase develop
+	pf = push --force
+	pn = push --no-verify
+	pfn = push --force --no-verify
+	st = status
+	sl = stash list
+	sts = stash
+	sp = stash pop
+	rd = rebase develop
+	rc = rebase --continue
+	ra = rebase --abort
+	rs = rebase --skip
+	rhh = reset --hard HEAD
+	rpo = remote prune origin
+	develop = !git checkout develop && git pull origin
+	last = !git checkout develop && git pull origin && git checkout -
+	lastrebase = !git checkout develop && git pull origin && git checkout - && git rebase develop
+	main = !git checkout main && git pull origin
+	previous = checkout -
+	upstream = !git push --no-verify -u origin HEAD
+	up = !git push --no-verify -u origin HEAD
+[push]
+	default = simple
+[init]
+	defaultBranch = main

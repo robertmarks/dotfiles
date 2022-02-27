@@ -1,0 +1,5 @@
+scripts/*
+LICENSE.md
+README.md
+Makefile
+.DS_Store

@@ -1,0 +1,50 @@
+#!/bin/zsh
+
+set -x
+{{- if (eq .chezmoi.os "darwin") }}
+# Global options
+
+# Show all file extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# Sidebar icon size
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
+
+# Finder options
+# Sort folders first
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+# Sort folders first (on desktop)
+defaults write com.apple.finder _FXSortFoldersFirstOnDesktop -bool true
+# Show quit menu for finder
+defaults write com.apple.finder QuitMenuItem -bool true
+# Don't show warning for file extension changing
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool true
+# Open new finder windows in home folder
+defaults write com.apple.finder NewWindowTargetPath "file://{{ .chezmoi.homeDir }}"
+# Show items on desktop
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+# Show title instantly
+defaults write NSGlobalDomain "NSToolbarTitleViewRolloverDelay" -float "0" && killall Finder
+
+# Set screenshot location
+defaults write com.apple.screencapture "location" -string "~/Documents/Screenshots" && killall SystemUIServer
+
+# Dock options
+# Don't re-order spaces
+defaults write com.apple.dock mru-spaces -bool false
+# Auto-hide dock
+defaults write com.apple.dock autohide -bool true
+# Disable recents
+defaults write com.apple.dock show-recents -bool false
+# Dock on the left
+defaults write com.apple.dock orientation left
+# Smallest icon size
+defaults write com.apple.dock tilesize -int 40
+# Auto-hide instantly
+defaults write com.apple.dock autohide-time-modifier -float 0
+
+## Import settings
+# defaults import com.googlecode.iterm2 private_Library/private_Preferences/private_private_com.googlecode.iterm2
+
+{{- end }}

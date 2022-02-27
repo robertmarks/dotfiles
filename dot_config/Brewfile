@@ -6,6 +6,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "azure/functions"
+tap "heroku/brew"
 
 # Main
 brew "chezmoi"
@@ -14,12 +15,13 @@ brew "tree"
 
 # Code etc
 brew "azure-functions-core-tools"
-brew "terraform"
-brew "vault"
+brew "hashicorp/tap/terraform"
+brew "hashicorp/tap/vault"
 brew "hugo"
 brew "azure-cli"
 brew "python@3.10"
 brew "git"
+brew "jq"
 
 # Casks
 cask "alfred"
@@ -35,3 +37,10 @@ cask "google-chrome"
 cask "usr-sse2-rdm" # RDM for display resolution
 cask "rectangle"
 cask "microsoft-office"
+cask "android-sdk"
+cask "android-studio"
+
+#App Store
+mas "Amphetamine", id: 937984704
+mas "Unsplash Wallpapers", id: 1284863847
+mas "Xcode", id: 497799835
