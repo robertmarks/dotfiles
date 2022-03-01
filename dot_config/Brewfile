@@ -39,6 +39,7 @@ cask "rectangle"
 cask "microsoft-office"
 cask "android-sdk"
 cask "android-studio"
+cask "keka"
 
 #App Store
 mas "Amphetamine", id: 937984704
