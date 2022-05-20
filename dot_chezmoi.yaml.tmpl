@@ -5,9 +5,18 @@
 {{-   $email = promptString "email" -}}
 {{- end -}}
 
+{{- $deviceType := "" -}}
+{{- if hasKey . "deviceType" -}}
+{{-   $deviceType = .deviceType -}}
+{{- else -}}
+{{-   $deviceType = promptString "deviceType" -}}
+{{- end -}}
+
+
 edit:
     command: "code"
     args: ["--wait"]
 
 data:
     email: {{ $email | quote }}
+    deviceType: {{ $deviceType | quote }}
