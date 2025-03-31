@@ -1,0 +1,86 @@
+==> Formulae
+adwaita-icon-theme		libssh
+ansible				libssh2
+aom				libtasn1
+aribb24				libtiff
+azure-cli			libunibreak
+azure-functions-core-tools	libunistring
+brotli				libvidstab
+ca-certificates			libvmaf
+cairo				libvorbis
+certifi				libvpx
+cffi				libx11
+chezmoi				libxau
+cjson				libxcb
+cryptography			libxdmcp
+czkawka				libxext
+dav1d				libxrender
+dive				libyaml
+docker				little-cms2
+docker-completion		lua
+ffmpeg				lz4
+flac				lzo
+fontconfig			mas
+freetype			mbedtls
+frei0r				mpdecimal
+fribidi				mpfr
+gcc				mpg123
+gdbm				nettle
+gdk-pixbuf			nmap
+gettext				oniguruma
+gh				opencore-amr
+giflib				openexr
+git				openjpeg
+glib				openssl@3
+gmp				opus
+gnutls				p11-kit
+go				pango
+graphene			pcre2
+graphite2			pipx
+gtk4				pixman
+harfbuzz			pkgconf
+hicolor-icon-theme		pycparser
+highway				python-certifi
+hugo				python-cryptography
+icu4c@76			python@3.10
+imath				python@3.11
+isl				python@3.12
+jasper				python@3.13
+jpeg-turbo			rav1e
+jpeg-xl				readline
+jq				rubberband
+lame				sdl2
+leptonica			shared-mime-info
+libarchive			smartmontools
+libass				snappy
+libb2				speex
+libbluray			sqlite
+libde265			srt
+libdeflate			svt-av1
+libepoxy			terraform
+libevent			tesseract
+libheif				theora
+libidn2				tree
+liblinear			unbound
+libmicrohttpd			vault
+libmpc				webp
+libnghttp2			webp-pixbuf-loader
+libogg				x264
+libomp				x265
+libpng				xorgproto
+libraw				xvid
+librist				xz
+librsvg				yt-dlp
+libsamplerate			zeromq
+libsndfile			zimg
+libsodium			zstd
+libsoxr
+
+==> Casks
+alfred			discord@canary		microsoft-office
+alt-tab			firefox			openscad
+android-sdk		fork			powershell
+android-studio		google-chrome		rectangle
+authy			iterm2			spotify
+discord			keka			steam
+discord-canary		microsoft-auto-update	visual-studio-code

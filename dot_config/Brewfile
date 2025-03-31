@@ -1,12 +1,12 @@
 # Taps
+tap "azure/functions"
 tap "hashicorp/tap"
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "azure/functions"
-tap "heroku/brew"
 
 # Main
 brew "chezmoi"
@@ -14,36 +14,69 @@ brew "mas"
 brew "tree"
 
 # Code etc
+brew "azure-cli"
 brew "azure-functions-core-tools"
+brew "docker"
+brew "docker-completion"
+brew "git"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/vault"
 brew "hugo"
-brew "azure-cli"
-brew "python@3.10"
-brew "git"
 brew "jq"
+brew "python@3.10"
 brew "terraform-docs"
 
+# Other
+brew "czkawka"
+
 # Casks
+cask "1password"
 cask "alfred"
-cask "fork"
-cask "iterm2"
-cask "powershell"
-cask "spotify"
-cask "visual-studio-code"
-cask "authy"
-cask "discord"
-cask "firefox"
-cask "google-chrome"
-cask "usr-sse2-rdm" # RDM for display resolution
-cask "rectangle"
-cask "microsoft-office"
+cask "alt-tab"
 cask "android-sdk"
 cask "android-studio"
+cask "anydesk"
+cask "authy"
+cask "balenaetcher"
+cask "bartender"
+cask "betterdisplay"
+cask "daisydisk"
+cask "discord"
+cask "firefox"
+cask "fork"
+cask "google-chrome"
+cask "iterm2"
+cask "itsycal"
 cask "keka"
-cask "snowflake-snowsql"
+cask "microsoft-office"
+cask "notion"
+cask "orcaslicer"
+cask "oversight"
+cask "powershell"
+cask "raspberry-pi-imager"
+cask "rectangle"
+cask "spotify"
+cask "tradingview"
+cask "visual-studio-code"
+cask "zoom"
+
+# Casks To Test
+# cask "forklift"
+# cask "sound-control"
+# cask "ubar"
+
+# Old Casks
+# cask "snowflake-snowsql"
+# cask "usr-sse2-rdm" # RDM for display resolution
 
 #App Store
 mas "Amphetamine", id: 937984704
+mas "Bear: Markdown Notes", id: 1091189122
+mas "Day One", id: 1055511498
+mas "Kindle", id: 302584613
+mas "LanScan", id: 472226235
+mas "Tailscale", id: 1475387142
+mas "WhatsApp Messenger", id: 310633997
+mas "WireGuard", id: 1451685025
 mas "Unsplash Wallpapers", id: 1284863847
 mas "Xcode", id: 497799835
